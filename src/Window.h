@@ -22,6 +22,7 @@ private:
 	SDL_Window *window;
 	SDL_Renderer *renderer;
 
+
 public:
 	Window(const char* titulo, int largura, int altura);
 	virtual ~Window();
