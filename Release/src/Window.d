@@ -1,3 +1,4 @@
-src/Window.o: ../src/Window.cpp ../src/Window.h
+src/Window.o: ../src/Window.cpp \
+ /home/max/dev/eclipseWorkspaceCpp/slidePuzzle/include/Window.h
 
-../src/Window.h:
+/home/max/dev/eclipseWorkspaceCpp/slidePuzzle/include/Window.h:

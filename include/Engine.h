@@ -9,18 +9,21 @@
 #define SRC_ENGINE_H_
 
 #include "SDL2/SDL.h"
+#include "SdlError.h"
 #include "Window.h"
+#include <iostream>
 
-
-class Engine {
+class Engine : public SdlError {
 
 private:
 	Window *w;
 	int initSdl();
+	void newWindow(const char *title, int largura, int altura);
+	Engine();
 
 public:
-	Engine();
-	int start(const char *title, int largura, int altura);
+	Engine(const char *title, int largura, int altura);
+	void run();
 	virtual ~Engine();
 };
 

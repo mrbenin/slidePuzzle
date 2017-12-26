@@ -6,33 +6,36 @@
  */
 
 #include "Engine.h"
+#include <iostream>
 
-Engine::Engine() {
+Engine::Engine(const char *title, int largura, int altura) {
+
+	if(SDL_Init(SDL_INIT_EVERYTHING) < 0){
+		this->getError("SDL INIT");
+		exit(1);
+	}
+
+	this->w = new Window(title,largura,altura);
+
+	if(this->w == nullptr){
+		this->getError("SDL WINDOW e RENDERER");
+		exit(1);
+	}
 
 }
 
 
-int Engine::start(const char* titulo, int largura, int altura){
+void Engine::run(){
 
-		if(initSdl() != 1){
-			this->w = new Window(titulo,largura,altura);
-		}else{
-			return 1;
-		}
-
-	return 0;
 }
 
 Engine::~Engine() {
 	// TODO Auto-generated destructor stub
+
+	delete w;
+
 	SDL_Quit();
 }
 
 
-int Engine::initSdl(){
-	if (SDL_Init(SDL_INIT_VIDEO) != 0){
-		return 1;
-	}
 
-	return 0;
-}
