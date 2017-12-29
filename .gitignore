@@ -1,2 +1,40 @@
-/Debug/
-/Release/
+### Eclipse ###
+
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# CDT-specific (C/C++ Development Tooling)
+.cproject
+
+.factorypath
+
+# sbteclipse plugin
+.target
+
+# Tern plugin
+.tern-project
+
+# Code Recommenders
+.recommenders/
+
+### Eclipse Patch ###
+# Eclipse Core		
+.project
+
+Debug/
+Release/
